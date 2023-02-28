@@ -1,17 +1,24 @@
 var saveData = document.getElementById("save");
 var dayBox = document.getElementById("currentDay");
+var hour = document.querySelectorAll('#hour-9,#hour-10,#hour-11,#hour-12,#hour-13,#hour-14,#hour-15,#hour-16,#hour-17');
+ 
 
 var current = dayjs();
-var weekDay =current.format('dddd');
- 
+var weekDay = current.format('dddd');
+var currentHour = new Date().getHours();
+
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
+  currentHour === hour
+  
+  
+  $(dayBox).text(weekDay);
 
-   $(dayBox).text(weekDay);
-   
+  
+
   
 
   
